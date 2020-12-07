@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
-   categories: []
+    categories: [],
+    subcategories: []
 };
 
 const categoryReducer = (state = INITIAL_STATE, action) => {
@@ -10,6 +11,13 @@ const categoryReducer = (state = INITIAL_STATE, action) => {
               ...state,
               categories: action.json.categories
          }
+     case 'SUBCATEGORY_RECEIVED':
+          return {
+               ...state,
+               subcategoryId: action.json.id,
+               subcategoryName: action.json.name,
+               subcategories: action.json.categories
+          }
     default: 
          return state;
   }

@@ -7,20 +7,25 @@ function* fetchCategories() {
     yield put({ type: "CATEGORIES_RECEIVED", json });
 }
 
-function* fetchSubcategory(url){
-    const json = yield fetch('https://api.wegmans.io' + url + API_KEY)
+function* fetchSubcategory(data){
+    const json = yield fetch('https://api.wegmans.io' + data.url  + API_KEY)
         .then(response => response.json());
     yield put({ type: "SUBCATEGORY_RECEIVED", json });
 }
 
 function* actionWatcher() {
-     yield takeLatest('GET_CATEGORIES', fetchCategories)
+     yield takeLatest('GET_CATEGORIES', fetchCategories);
+     
+}
+
+function* fetchSubcategoryWatcher(){
+    yield takeLatest('GET_SUBCATEGORIES', fetchSubcategory);
 }
 
 export default function* rootSaga() {
    yield all([
    actionWatcher(),
-   fetchCategories(),
+   fetchSubcategoryWatcher()
 
    ]);
 }

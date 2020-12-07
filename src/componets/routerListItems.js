@@ -1,16 +1,16 @@
 import React from "react"
 import {connect} from 'react-redux'
 import {Link} from "react-router-dom";
-import {getCategoriesRequest} from '../actions/actions'
+import {getCategoriesRequest, getSubcategoriesRequest} from '../actions/actions'
 
 class RouterListItems extends React.Component{
     
     render(){
-        console.log(this.props)
         let items = this.props.categories.map((item, index) => {
-            if(item !== ''){ 
-                return ( 
-                    <RouterListItem key = {item.id}  id = {item.id} name= {item.name} />
+            if(item !== ''){
+                return (
+
+                    <RouterListItem key = {index}  id = {item.id} name= {item.name} category = {item} getSubcategories = {this.props.getSubcategories} />
                 );
                 } else return null;
         });
@@ -30,18 +30,22 @@ class RouterListItems extends React.Component{
 }
 
 function RouterListItem (props) {
-    
+    const getSubcategory = () => props.getSubcategories(props.category._links[0].href)
       return(
         <li style = {{display: 'inline'}}>
-          <Link style = {{textDecoration: 'none'}} to={"/" + props.name.toLowerCase().replace(/\s/g, '_').replace(',', '').replace('&', 'and')}> | {props.name} | </Link>
+          <Link
+               onClick={getSubcategory}
+              style = {{textDecoration: 'none'}}
+              to={"/" + props.name.toLowerCase().replace(/\s/g, '_').replace(',', '').replace('&', 'and')}
+          > | {props.name} | </Link>
         </li>     
       );
   }
 
 
-
-
-
-const mapDispatchToProps = dispatch => ({getCategories: () => dispatch(getCategoriesRequest())})
-const mapStateToProps =(...state) =>  ({categories: state[0].categories, });
+const mapDispatchToProps = dispatch => ({
+    getCategories: () => dispatch(getCategoriesRequest()),
+    getSubcategories: (url) => dispatch(getSubcategoriesRequest(url))
+})
+const mapStateToProps =(...state) =>  ({categories: state[0].categories});
 export default connect(mapStateToProps, mapDispatchToProps)(RouterListItems) 

@@ -1,4 +1,4 @@
-import PageRouter from '../componets/pageRouter';
+import PageRouter from './pageRouter';
 import { Provider } from 'react-redux';
 import {store} from '../configure-store';
 

@@ -1,4 +1,9 @@
 export const getCategoriesRequest = () => ({
-    type: 'GET_CATEGORIES', url:'/products/categories?api-version=2018-10-18'
+    type: 'GET_CATEGORIES'
 });
+
+export const getSubcategoriesRequest = (url) =>{
+    return({
+    type: 'GET_SUBCATEGORIES', url: url 
+});}
 
