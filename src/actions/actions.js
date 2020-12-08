@@ -7,3 +7,8 @@ export const getSubcategoriesRequest = (url) =>{
     type: 'GET_SUBCATEGORIES', url: url 
 });}
 
+export const clearSubcategoriesRequest = () => ({
+    type: 'CLEAR_SUBCATEGORIES'
+});
+
+
