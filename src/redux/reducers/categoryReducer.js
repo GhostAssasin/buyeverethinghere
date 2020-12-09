@@ -18,7 +18,6 @@ const INITIAL_STATE = {
             {id: '7221-1034', imgId:'c31681156c04fd237b4bdf102baf5a00ba6f0223'},
             {id: '7221-1263', imgId:'00a00b0f1c02956f69ec051a0ae795e939122660'}
         ]
-
 };
 
 const categoryReducer = (state = INITIAL_STATE, action) => {
@@ -44,6 +43,5 @@ const categoryReducer = (state = INITIAL_STATE, action) => {
     default: 
          return state;
   }
- };
- 
- export default categoryReducer;
+};
+export default categoryReducer;

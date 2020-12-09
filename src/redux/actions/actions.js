@@ -11,4 +11,11 @@ export const clearSubcategoriesRequest = () => ({
     type: 'CLEAR_SUBCATEGORIES'
 });
 
+export  const getItemsRequest = (id) => ({
+    type: 'GET_ITEMS' , id: id
+});
+
+export  const getItemRequest = (id) => ({
+    type: 'GET_ITEM' , id: id
+});
 

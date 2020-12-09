@@ -1,6 +1,7 @@
 import React from "react"
 import {connect} from 'react-redux'
 import {Link} from "react-router-dom";
+import {idToPath} from "../helpers/helpers";
 
 
 class SubclassRouterLinks extends React.Component{
@@ -8,7 +9,14 @@ class SubclassRouterLinks extends React.Component{
          let items = this.props.subcategories.map((item, index) => {
              if(item !== null){
                  return (
-                         <SubclassRouterLink key = {index} id = {item.id} name = {item.name} path = {this.props.path} customSubcategoryImg = {this.props.customSubcategoryImg} clearSubcategories = {this.props.clearSubcategories}/>
+                     <SubclassRouterLink
+                         key = {index}
+                         id = {item.id}
+                         name = {item.name}
+                         path = {this.props.path}
+                         customSubcategoryImg = {this.props.customSubcategoryImg}
+                         clearSubcategories = {this.props.clearSubcategories}
+                     />
                  );
                  } else return null;
          });
@@ -26,7 +34,7 @@ class SubclassRouterLink extends React.Component{
             this.props.customSubcategoryImg.map((item) => (this.props.id === item.id) ? imgId = item.imgId : null);
         }
         return(
-            <Link to = { this.props.path + '/' + this.props.name.toLowerCase().replace(/\s/g, '_').replace(',', '').replace('&', 'and') }>
+            <Link to = { this.props.path + '/' + idToPath(this.props.name)}>
                 <div style={{height: '200px', width: '200px'}}>
                     <img
                         style={{height: '150px',width: '150px'}}
@@ -43,6 +51,10 @@ class SubclassRouterLink extends React.Component{
 }
 
 
-const mapStateToProps =(...state) => {
-    return({subcategoryId: state[0].subcategoryId, subcategoryName: state[0].subcategoryName, subcategories: state[0].subcategories , customSubcategoryImg: state[0].customSubcategoryImg});}
+const mapStateToProps =(...state) => ({
+    subcategoryId: state[0].categoryReducer.subcategoryId,
+    subcategoryName: state[0].categoryReducer.subcategoryName,
+    subcategories: state[0].categoryReducer.subcategories ,
+    customSubcategoryImg: state[0].categoryReducer.customSubcategoryImg
+});
 export default connect(mapStateToProps, null)(SubclassRouterLinks)

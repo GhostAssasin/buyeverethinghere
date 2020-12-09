@@ -1,13 +1,14 @@
 import React from "react"
 import {connect} from 'react-redux'
 import {Link} from "react-router-dom";
-import {clearSubcategoriesRequest, getCategoriesRequest, getSubcategoriesRequest} from '../actions/actions'
+import {clearSubcategoriesRequest, getCategoriesRequest, getSubcategoriesRequest} from '../redux/actions/actions'
+import {idToPath} from "../helpers/helpers";
+
 
 class RouterListItems extends React.Component{
-    
+
     render(){
-        let items = this.props.categories.map((item, index) => {
-            if(item !== ''){
+        const items = this.props.categories.map((item, index) => {
                 return (
                     <RouterListItem
                         key = {index}
@@ -15,9 +16,9 @@ class RouterListItems extends React.Component{
                         name= {item.name}
                         category = {item}
                         getSubcategories = {this.props.getSubcategories}
-                        clearSubcategories = {this.props.clearSubcategories} />
+                        clearSubcategories = {this.props.clearSubcategories}
+                    />
                 );
-                } else return null;
         });
         return (
             <div style = {{backgroundColor: '#EEEEEE'}}>
@@ -43,17 +44,18 @@ function RouterListItem (props) {
           <Link
                onClick={getSubcategory}
               style = {{textDecoration: 'none'}}
-              to={"/" + props.name.toLowerCase().replace(/\s/g, '_').replace(',', '').replace('&', 'and')}
+              to={"/" + idToPath(props.name) }
           > | {props.name} | </Link>
         </li>     
       );
   }
 
-
+const mapStateToProps =(...state) => ({
+    categories: state[0].categoryReducer.categories
+});
 const mapDispatchToProps = dispatch => ({
     getCategories: () => dispatch(getCategoriesRequest()),
     getSubcategories: (url) => dispatch(getSubcategoriesRequest(url)),
     clearSubcategories: () => dispatch(clearSubcategoriesRequest())
 })
-const mapStateToProps =(...state) =>  ({categories: state[0].categories});
 export default connect(mapStateToProps, mapDispatchToProps)(RouterListItems) 
