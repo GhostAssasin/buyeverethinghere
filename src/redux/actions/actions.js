@@ -15,7 +15,12 @@ export  const getItemsRequest = (id) => ({
     type: 'GET_ITEMS' , id: id
 });
 
+export const clearItemsRequest = () => ({
+    type: 'CLEAR_ITEMS'
+});
+
 export  const getItemRequest = (id) => ({
     type: 'GET_ITEM' , id: id
 });
+
 

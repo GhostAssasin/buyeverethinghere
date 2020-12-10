@@ -1,20 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4c013354-a409-4a52-ba8c-69732eff9c03" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/api/Api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/libs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/componets/RouterListItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/componets/RouterPathElement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/componets/SubclassRouterLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/componets/routerListItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componets/routerListItems.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/componets/routerPathElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componets/routerPathElements.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/componets/subcategoryRouterItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componets/subcategoryRouterItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componets/BaseItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componets/BaseItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componets/routerListItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componets/RouterListItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componets/routerPathElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componets/RouterPathElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componets/subcategoryRouterItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componets/SubcategoryRouterItems.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/configure-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/configure-store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/pageRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/pageRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/categoryReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/itemReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/rootReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sagas/rootSaga.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/itemReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/itemReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/sagas/category.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sagas/category.saga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/sagas/items.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sagas/items.saga.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +57,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1lLV8LzN75MUCkSPE4FjquQa2OZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,7 +67,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../any-book" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -65,25 +94,43 @@
       <updated>1607376198617</updated>
       <workItem from="1607376202567" duration="42708000" />
       <workItem from="1607517772197" duration="261000" />
+      <workItem from="1607518043725" duration="5999000" />
+      <workItem from="1607546421761" duration="20670000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="551" y="256" key="#ESLint" timestamp="1607503126554">
+    <state x="551" y="256" key="#ESLint" timestamp="1607605246138">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="551" y="256" key="#ESLint/0.0.1366.728@0.0.1366.728" timestamp="1607503126554" />
-    <state x="457" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607455555363">
+    <state x="551" y="256" key="#ESLint/0.0.1366.728@0.0.1366.728" timestamp="1607605246138" />
+    <state x="457" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607603757326">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="457" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1607455555363" />
+    <state x="457" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1607603757326" />
     <state x="413" y="144" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1607376430456">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="144" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1366.728@0.0.1366.728" timestamp="1607376430456" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1607590946454">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607590946454" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1607379544500">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

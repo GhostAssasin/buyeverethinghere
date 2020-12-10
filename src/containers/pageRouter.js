@@ -4,8 +4,8 @@ import {
     Switch,
   } from "react-router-dom";
 
-import RouterListItems from '../componets/routerListItems';
-import RouterPathElements from "../componets/routerPathElements";
+import RouterListItems from '../componets/RouterListItems';
+import RouterPathElements from "../componets/RouterPathElements";
 
 
 class PageRouter extends React.Component{

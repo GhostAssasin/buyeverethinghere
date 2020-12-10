@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
     currentIndex: 0,
+    items : [],
 
    
 };
@@ -8,16 +9,16 @@ const itemReducer = (state = INITIAL_STATE, action) => {
 
   switch (action.type) {
       case 'ITEMS_RECEIVED':
-
-
          return {
-              ...state
+              ...state,
+             items: action.items
          }
 
-      case 'CLEAR_CURRENT_ITEMS':
+      case 'CLEAR_ITEMS':
 
           return {
-              ...state
+              ...state,
+              items: []
           }
 
     default: 
